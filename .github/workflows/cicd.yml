@@ -3,7 +3,7 @@ name: CI/CD Microservices
 on:
   push:
     branches:
-      - main # Thay đổi nếu bạn dùng branch khác
+      - dev # Thay đổi nếu bạn dùng branch khác
 
 jobs:
   deploy:
