@@ -47,10 +47,10 @@ jobs:
             docker pull dttrung324/my-shop-backend:latest
             docker stop my-shop-backend-container || true
             docker rm my-shop-backend-container || true
-            docker run -d -p 5000:5000 --name my-shop-backend-container dttrung324/my-shop-backend:latest
+            docker run -d -p 8000:8000 --name my-shop-backend-container dttrung324/my-shop-backend:latest
             
             # Deploy frontend
             docker pull dttrung324/my-shop-frontend:latest
             docker stop my-shop-frontend-container || true
             docker rm my-shop-frontend-container || true
-            docker run -d -p 3000:3000 --name my-shop-frontend-container dttrung324/my-shop-frontend:latest
+            docker run -d -p 3000:80 --name my-shop-frontend-container dttrung324/my-shop-frontend:latest

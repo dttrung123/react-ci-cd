@@ -3,17 +3,17 @@ import axios from 'axios';
 import './App.css'
 
 function App() {
-  const [userName, setUserName] = useState('');
+  // const [userName, setUserName] = useState('');
 
-  useEffect(() => {
-    getNames();
-  }, []);
+  // useEffect(() => {
+  //   getNames();
+  // }, []);
 
-  const getNames = async () => {
-    const response = await axios.get('/names');
-    console.log(response);
-    setUserName(response.data);
-  }
+  // const getNames = async () => {
+  //   const response = await axios.get('/names');
+  //   console.log(response);
+  //   setUserName(response.data);
+  // }
   return (
     <>
       <div>Hello</div>
