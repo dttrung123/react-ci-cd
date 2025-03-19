@@ -14,7 +14,7 @@ jobs:
 
       - name: Build and push backend Docker image
         run: |
-          docker build -f backend/Dockerfile -t dttrung324/my-shop-backend:latest .
+          docker build -t dttrung324/my-shop-backend:latest ./backend
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
           docker push dttrung324/my-shop-backend:latest
 
@@ -26,7 +26,7 @@ jobs:
 
       - name: Build and push frontend Docker image
         run: |
-          docker build -f frontend/Dockerfile -t dttrung324/my-shop-frontend:latest .
+          docker build -t dttrung324/my-shop-frontend:latest ./frontend
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
           docker push dttrung324/my-shop-frontend:latest
 
