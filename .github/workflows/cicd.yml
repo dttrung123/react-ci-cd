@@ -27,7 +27,7 @@ jobs:
       - name: Build and push frontend Docker image
         run: |
           docker build -t dttrung324/my-shop-frontend:latest ./frontend
-  #         docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+          docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
   #         docker push dttrung324/my-shop-frontend:latest
 
   # deploy:
