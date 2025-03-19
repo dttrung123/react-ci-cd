@@ -1,11 +1,17 @@
 # Sử dụng Node.js base image cho build
-FROM node:16-alpine AS build
+# FROM node:16-alpine AS build
+
+# Sử dụng phiên bản Node.js 18
+FROM node:18-alpine AS build
 
 # Thiết lập thư mục làm việc trong container
 WORKDIR /app
 
 # Sao chép package.json và package-lock.json (nếu có)
 COPY package*.json ./
+
+# Cài đặt các polyfill cần thiết
+# RUN npm install crypto-browserify
 
 # Cài đặt các dependencies
 RUN npm install
